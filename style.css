@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.video-cont {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+}
+
+.action-cont {
+    height: 12rem;
+    width: 5rem;
+    /* background-color: blue; */
+    position: absolute;
+    top: calc( ( 100vh - 12rem ) / 2);
+    left: calc( (100vw - 10rem ) );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* .record-btn-cont {
+    height: 5rem;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.action-cont>* {
+    height: 5rem;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    z-index: 1; 
+}
+
+.record-btn {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.capture-btn {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.timer-cont {
+    position: absolute;
+    color: white;
+    bottom: 5rem;
+    left: 2rem;
+}
+
+.timer {
+    display: none;   
+}
+
+.filter-cont {
+    /* background-color: blue; */
+    height: 12rem;
+    width: 4rem;
+    position: absolute;
+    top: calc( ( 100vh - 12rem ) / 2);
+    left: 2rem;
+    z-index: 1;
+}
+
+.filter {
+    height: 3rem;
+    background-image: url(https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI);
+    background-size: 100% 100%;
+    /* it will merge the image color and background-color */
+    background-blend-mode: color-burn;
+}
+
+.brown {
+    background-color: #ffa50052;
+}
+
+.orange {
+    background-color: #a52a2a59;
+}
+
+.pink {
+    background-color: #ffc0cb57;
+}
+
+.transparent {
+    background-color : transparent;
+}
+
+.filter-layer {
+    height: 100vh;
+    width: 100vw;
+    /* background-color: brown; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.material-icons{
+    color: white;
+    /* why font-size: is not working here on this icon */
+    /* font-size: 10rem; */
+}
+
+.gallery{
+    position: absolute;
+    bottom: 6rem;
+    right:5.5rem;
+    z-index: 1;
+}
+
+.gallery:hover {
+    cursor: pointer;
+}
+
+.scale-capture {
+    animation-name: scale-capture;
+    animation-duration: 1s;
+}
+@keyframes scale-capture {
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.scale-record {
+    animation-name: scale-record;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+@keyframes scale-record {
+    0% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

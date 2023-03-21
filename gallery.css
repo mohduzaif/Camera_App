@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.back {
+    background-color: rgb(245, 136, 47);
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 4rem;
+    bottom: 4rem;
+}
+.back:hover {
+    cursor: pointer;
+}
+
+.gallery-cont {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.media-cont {
+    height: 15rem;
+    width: 15rem;
+    background-color: aqua;
+    border: 5px solid white;
+    margin: 3rem;
+}
+
+.media {
+    height: calc( 100% - 2rem - 2rem );
+    width: 100%;
+    background-color: aqua;
+}
+
+.media>*{
+    height: 100%;
+    width: 100%;
+}
+
+.action-btn {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn:hover {
+    cursor: pointer;
+}
+
+.delete {
+    background-color: red;
+    font-weight: bold;
+}
+
+.download {
+    background-color: rgb(119, 255, 0);
+    font-weight: bold;
+}
